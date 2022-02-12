@@ -1,0 +1,38 @@
+package ru.geekbrains.lesson1;
+
+/**
+ * Java 1. Homework #2
+ *
+ * @author Rozental Irina
+ * @version 11.02.2022
+ *
+ */
+
+class HomeWork2 {
+    public static void main(String[] args) {
+        System.out.println(between10and20(5, 6));
+        boolean result = positiveOrNegative(7);
+        System.out.println(result? "Sum positive" : "Sum negative");
+        System.out.println(positiveNegative(-6));
+        hello();
+    }
+
+    static boolean between10and20(int a, int b) {
+        return a + b > 10 && a + b <20;
+    }
+
+    static boolean positiveOrNegative(int y) {
+        return y >= 0;
+    }
+
+    static boolean positiveNegative(int x) {
+        return x >= 0;
+    }
+
+    static void hello() {
+        for(int i = 0; i < 5; i++) {
+            System.out.println("Hello, gys!");
+        }
+    }
+
+}
