@@ -18,7 +18,7 @@ class HomeWork2 {
     }
 
     static boolean between10and20(int a, int b) {
-        return a + b > 10 && a + b <20;
+        return a + b > 10 && a + b < 20;
     }
 
     static boolean positiveOrNegative(int y) {
