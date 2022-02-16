@@ -4,35 +4,55 @@ package ru.geekbrains.lesson1;
  * Java 1. Homework #2
  *
  * @author Rozental Irina
- * @version 11.02.2022
+ * @version 16.02.2022
  *
  */
 
 class HomeWork2 {
+	
     public static void main(String[] args) {
         System.out.println(between10and20(5, 6));
-        boolean result = positiveOrNegative(7);
-        System.out.println(result? "Sum positive" : "Sum negative");
+        System.out.println(between10and20(12, -4));
+        System.out.println(between10and20(20, 6));
+
+        positiveOrNegative(-7);
+        positiveOrNegative(0);
+        positiveOrNegative(7);
+
         System.out.println(positiveNegative(-6));
-        hello();
+        System.out.println(positiveNegative(0));
+        System.out.println(positiveNegative(6));
+
+        hello("Hello, guys!", 7);
+
+        System.out.println(yearLeap(1904));
+        System.out.println(yearLeap(1900));
+        System.out.println(yearLeap(2000));
+        System.out.println(yearLeap(2005));
     }
+
 
     static boolean between10and20(int a, int b) {
-        return a + b > 10 && a + b < 20;
+        return a + b >= 10 && a + b <= 20;
     }
 
-    static boolean positiveOrNegative(int y) {
-        return y >= 0;
+    static void positiveOrNegative(int y) {
+        System.out.println(y >= 0? "Positive" : "Negative");
     }
 
     static boolean positiveNegative(int x) {
-        return x >= 0;
+        return x < 0;
     }
 
-    static void hello() {
-        for(int i = 0; i < 5; i++) {
-            System.out.println("Hello, gys!");
+    static void hello(String s, int count) {
+        for(int i = 0; i < count; i++) {
+            System.out.println(s);
         }
+    }
+    
+    static boolean yearLeap(int year) {
+        return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
     }
 
 }
+
