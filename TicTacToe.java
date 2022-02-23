@@ -1,8 +1,8 @@
 /**
- * Java 1. Homework #3
+ * Java 1. Homework #4
  *
  * @author Rozental Irina
- * @version 17.02.2022
+ * @version 23.02.2022
  *
  */
  
