@@ -5,8 +5,9 @@
  * @version 01.03.2022
  *
  */
- class Homework6 {
-    public static void main (String[] args) {
+class Homework6 {
+	
+    public static void main(String[] args) {
 		Cat cat = new Cat(200);
 		Dog dog = new Dog (500, 10);
 		
@@ -37,7 +38,7 @@
     
     @Override
     public String swim(int distance) {
-		return getClassName() + "can't swim";
+		return getClassName() + " can't swim";
 	}	
  }
  
@@ -64,15 +65,15 @@
 	@Override
 	public String run(int distance) {
         if (distance > runLimit) {
-			return className + " culdn't run " + distance;
+			return className + " couldn't run " + distance;
 		} else {
 			return className + " successfully ran " + distance;
 		}
 	}
 	
 	@Override
-	public String run(int distance) {
-        if (distance > runLimit) {
+	public String swim(int distance) {
+        if (distance > swimLimit) {
 			return className + " culdn't swim " + distance;
 		} else {
 			return className + " successfully swim " + distance;
