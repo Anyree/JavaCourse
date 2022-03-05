@@ -9,51 +9,51 @@ import java.awt.Font;
 
 class CounterApp extends JFrame {
 	
-	private int value;
+    private int value;
 
     public static void main(String[] args) {
-		new CounterApp(0);
-	}
+	new CounterApp(0);
+    }
 	
-	CounterApp(final int initialValue) {
-		setTitle("Simple Counter");
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setSize(300,120);
-		setLocationRelativeTo(null);
+    CounterApp(final int initialValue) {
+	setTitle("Simple Counter");
+	setDefaultCloseOperation(EXIT_ON_CLOSE);
+	setSize(300,120);
+	setLocationRelativeTo(null);
 		
-		Font font = new Font("Arial", Font.BOLD, 42);
+	Font font = new Font("Arial", Font.BOLD, 42);
 		
-		value = initialValue;
+	value = initialValue;
 		
-		JLabel counterValueview = new JLabel();
-		counterValueView.setFont(font);
-		counterValueview.setHorizontalAlignment(SwingConstants.CENTER);
-		add(counterValueView, BorderLayout.CENTER);
+	JLabel counterValueview = new JLabel();
+	counterValueView.setFont(font);
+	counterValueview.setHorizontalAlignment(SwingConstants.CENTER);
+	add(counterValueView, BorderLayout.CENTER);
 		
-		counterValueview.setText(String.valueOf(value));
+	counterValueview.setText(String.valueOf(value));
 	
         JButton decrementButton = new JButton("<");
-		decrementButton.setFont(font);
-		decrementButton.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent actionEvent) {
-				value--;
-				counterValueview.setText(String.valueOf(value));
-			}
-		});
-		add(decrementButton, BorderLayout.WEST);
+	decrementButton.setFont(font);
+	decrementButton.addActionListener(new ActionListener() {
+	    @Override
+	    public void actionPerformed(ActionEvent actionEvent) {
+	        value--;
+	        counterValueview.setText(String.valueOf(value));
+	    }
+	});
+	add(decrementButton, BorderLayout.WEST);
 		
-		JButton incrementButton = new JButton(">");
-		incrementButton.setFont(font);
-		incrementButton.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent actionEvent) {
-				value++;
-				counterValueview.setText(String.valueOf(value));
-			}
-		});
-		add(incrementButton, BorderLayout.EAST);
+	JButton incrementButton = new JButton(">");
+	incrementButton.setFont(font);
+	incrementButton.addActionListener(new ActionListener() {
+	    @Override
+	    public void actionPerformed(ActionEvent actionEvent) {
+	        value++;
+		counterValueview.setText(String.valueOf(value));
+	    }
+	});
+	add(incrementButton, BorderLayout.EAST);
 	
-		setVisible(true);
+	setVisible(true);
 	}
 }
